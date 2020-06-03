@@ -38,18 +38,16 @@ void game_manager::clean(){
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
     std::cout << "game cleaned" << std::endl;
+    exit(0);
 }
 
 void game_manager::handle_events(){
     SDL_Event event;
     
     SDL_PollEvent(&event);
-    switch (event.type){
-        case SDL_QUIT:
-            clean();
-            break;
-        default:
-            break;
-    }
+    // SDL_WaitEvent(&event);
+    if(event.type == SDL_QUIT) 
+        clean();
+
 }
 

@@ -8,7 +8,7 @@ class vec2{
     public:
         float x, y;
     public:
-        vec2(int xcoord = 0, int ycoord = 0);
+        vec2(float xcoord = 0, float ycoord = 0);
         vec2 operator + (vec2 const &coord);
         vec2 operator - (vec2 const &coord);
         vec2 operator / (float const &num);

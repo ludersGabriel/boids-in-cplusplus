@@ -1,6 +1,6 @@
 #include "vec2.h"
 
-vec2::vec2(int xcoord, int ycoord){
+vec2::vec2(float xcoord, float ycoord){
     x = xcoord;
     y = ycoord;
 }

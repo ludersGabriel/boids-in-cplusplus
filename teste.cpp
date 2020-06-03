@@ -8,23 +8,22 @@ int main(int argc, char* argv[]){
     Uint32 frameStart;
     int frameTime;
 
-    game_manager game = game_manager(1600, 900, "boid sim", false);
-    boid birb(250, 23, 200, vec2(10, 10), vec2(5, 5), &game);
+    game_manager game = game_manager(1800, 1000, "boid sim", false);
+    flock boids = flock(&game);
 
     while(game.isRunning){
         frameStart = SDL_GetTicks();
 
         //main body here
-        game.handle_events();
-        birb.draw_boid();
-        birb.move();
+        boids.handle_factors();
+        boids.draw_flock();
+        boids.move_flock();
     
         frameTime = SDL_GetTicks() - frameStart;
         //ends here
 
         if (frameDelay > frameTime)
             SDL_Delay(frameDelay - frameTime);
-
     }
     
     return 0;
