@@ -11,3 +11,6 @@
   - make --> will compile all the header files and create an executable
   - make run --> will compile, if not, and run the executable
   - make clean --> will delete all obj files from the folder and the executable
+  
+![](https://github.com/ludersGabriel/boids-in-cplusplus/blob/master/boidSIM.png "flocking birds simulation")
+
